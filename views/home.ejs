@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> <%= title %> </title>
+    <script src="https://kit.fontawesome.com/6fa3966e62.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2 class="header"> TODO App </h2>
+    <div class="main">
+        <!-- <div class="details"> -->
+            <form action="/create_list" method="post">
+                <!-- <div class="border"> -->
+
+                    <hr class="top-details">
+
+                    <div id="desc">
+                        <legend> DESCRIPTION:</legend>
+                        <!-- <textarea  cols="80" rows="3" ></textarea> -->
+                        <input type="text" name="description" id="description" placeholder="What do you need to do?" required>
+                    </div>
+                <!-- </div> -->
+
+                <hr class="top-details">
+
+                <div class="sub-detail">
+                    <div id="cat">
+                        <legend> CATEGORY: </legend>
+                        <select name="category" id="category" required>
+                            <option value="" selected disabled hidden> Choose a category </option>
+                            <option value="Personal"> Personal </option>
+                            <option value="School"> School </option>
+                            <option value="College"> College </option>
+                            <option value="Home"> Home </option>
+                            <option value="Cleaning"> Cleaning </option>
+                            <option value="Other"> Other </option>
+                        </select>
+                    </div>
+                    
+                    <hr id="vertical-line">
+                    
+                    <!-- <div id="date-border"> -->
+                        <div id="due-date">
+                            <legend> DUE DATE: </legend>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                    <!-- </div> -->
+                </div>
+
+                <hr class="top-details">
+                
+                <div class="btn">
+                    <button type="submit" id="btn1"> ADD TASK </button>
+                </div>
+            </form>
+            <div id="delete-task-btn">
+                <form method="get" action="/delete_task">
+                    <button type="submit" id="btn2"> DELETE TASK </button>
+                </form>
+            </div>
+        <!-- </div> -->
+
+        <ul>
+            <% for(var i of todoList) {%>
+                <hr class="hr-width">
+                <li class="print-details">
+                    <div id="display-details">
+
+                        <input type="checkbox" name="details">
+
+                        <label for="details">
+                            <div id="display-desc">
+                                <%= i.description %>
+                            </div>
+                            <div id="display-category">
+                                <%= i.category %>
+                            </div>
+                            <div id="display-date">
+                                <%= i.date %>
+                            </div>
+                        </label>
+
+                    </div>
+                    <!-- <div id="delete-btn"> -->
+                        <!-- <a href="/delete_task/?id=<%= i._id %>"> -->
+                            <!-- <i class="fa-solid fa-square-xmark"></i> -->
+                        <!-- </a> -->
+                    <!-- </div> -->
+                </li>
+                <hr class="hr-width">
+            <% } %>
+        </ul>
+
+    </div>
+    
+</body>
+</html>

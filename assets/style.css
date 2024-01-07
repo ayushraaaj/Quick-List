@@ -1,0 +1,114 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+.header{
+    text-align: center;
+    
+}
+.main{
+    max-width: 45%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#description{
+    width: 80%;
+    border: none;
+    outline: none;
+    font-size: 1.05rem;
+}
+
+
+.sub-detail{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn1, #due-date, #cat{
+    margin: 10px;
+}
+
+#category, #date{
+    font-size: 17px;
+    padding-top: 5px;
+    border: none;
+    outline: none;
+}
+#desc{
+    position: relative;
+    left: 1.5%;
+}
+
+select{
+    padding-right: 5%;
+}
+
+legend{
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
+#vertical-line{
+    position: relative;
+    right: 2%;
+}
+
+#btn2{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: absolute;
+    top: 24.55vh;
+    left: 52vw;
+}
+
+#btn1, #btn2{
+    margin-right: 150px;
+}
+
+#display-details{
+    width: 80%;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+    width: 80%;
+    margin: auto;
+}
+
+#display-desc{
+    font-weight: bold;
+    font-size: 1.25rem;
+    /* width: 80%; */
+}
+#display-category{
+    position: absolute;
+    right: 0px;
+    bottom: 2px;
+    background-color: violet;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 25%;
+}
+
+#delete-btn{
+    width: 15%;
+    float: right;
+    margin-top: -30px;
+    cursor: pointer;
+}
+
+.hr-width{
+    width: 80%;
+}
+.print-details{
+    margin-left: 11%;
+}
